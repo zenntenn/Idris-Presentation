@@ -1,0 +1,10 @@
+%default covering
+
+thing : IO ()
+thing = do char <- getChar
+           putCharLn char
+           thing
+
+main : IO ()
+main = do disableBuffering
+          thing
