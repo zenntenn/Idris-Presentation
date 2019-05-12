@@ -43,6 +43,20 @@ safeMinus k j = case j `isLTE` k of
 safeMinusJust : (7 `safeMinus` 5) = Just 2
 safeMinusJust = Refl
 
+{-
+Refl is a built in type.  Here's what :doc Refl shows in the repl:
+Idris> :doc Refl
+Refl : x = x
+    A proof that x in fact equals x. To construct this, you must have already shown that both sides
+    are in fact equal.
+    Arguments:
+        (implicit) A : Type  -- the type at which the equality is proven
+
+        (implicit) x : A  -- the element shown to be equal to itself.
+
+    The function is Total
+-}
+
 ||| Also automatically filled with a proof search
 safeMinusNothing : (5 `safeMinus` 7) = Nothing
 safeMinusNothing = Refl
