@@ -33,7 +33,7 @@ When checking argument smaller to function Prelude.Nat.-:
 -}
 
 ||| Does typecheck
-||| Note: ?safeMinus_rhs_3 hole filled to Nothing with a proof search
+||| Note: ?safeMinus_rhs_3 hole automatically filled to Nothing with a proof search
 safeMinus : Nat -> Nat -> Maybe Nat
 safeMinus k j = case k `isLTE` j of
                      (Yes prf) => Just (j - k)
