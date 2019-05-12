@@ -40,6 +40,18 @@ When checking argument b to constructor Email.MkEmail:
                 So False
 -}
 
+{-
+Uninhabited Email where
+  uninhabited (MkEmail "zenten@zenten.ca") impossible
+
+Typecheck error is: Email.Email implementation of Prelude.Uninhabited.Uninhabited, method uninhabited (MkEmail "zenten@zenten.ca") is a valid case
+-}
+
+||| Basically a "static unit test", this time confirms that examples won't typecheck
+Uninhabited Email where
+  uninhabited (MkEmail "zenten @ zenten.ca") impossible
+  uninhabited (MkEmail "zenten;@zenten.ca") impossible
+
 main : IO ()
 main = do potential <- getLine
           case choose (isEmail potential) of
