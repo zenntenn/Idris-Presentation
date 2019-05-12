@@ -38,3 +38,6 @@ safeMinus : Nat -> Nat -> Maybe Nat
 safeMinus k j = case k `isLTE` j of
                      (Yes prf) => Just (j - k)
                      (No contra) => Nothing
+
+safeMinusJust : (7 `safeMinus` 5) = Just 2
+safeMinusJust = ?safeMinusJust_rhs
