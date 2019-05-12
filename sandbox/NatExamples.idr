@@ -39,5 +39,10 @@ safeMinus k j = case j `isLTE` k of
                      (Yes prf) => Just (k - j)
                      (No contra) => Nothing
 
+||| Also automatically filled with a proof search
 safeMinusJust : (7 `safeMinus` 5) = Just 2
-safeMinusJust = ?safeMinusJust_rhs
+safeMinusJust = Refl
+
+||| Also automatically filled with a proof search
+safeMinusNothing : (5 `safeMinus` 7) = Nothing
+safeMinusNothing = Refl
