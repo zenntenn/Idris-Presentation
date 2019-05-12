@@ -10,7 +10,7 @@ Main site: https://www.idris-lang.org/
 
 [Vect Definition](https://github.com/idris-lang/Idris-dev/blob/master/libs/base/Data/Vect.idr)
 
-[My Vect Examples](sandbox/VectExamples.idr)
+[My Vect Example](sandbox/VectExamples.idr)
 
 [So Definition](https://github.com/idris-lang/Idris-dev/blob/master/libs/base/Data/So.idr)
 
