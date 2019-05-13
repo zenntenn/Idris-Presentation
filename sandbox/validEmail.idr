@@ -1,4 +1,4 @@
-module Email
+module Main
 
 import Data.So
 
